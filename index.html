@@ -4,80 +4,110 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ICT for Little Minds — Grade 1 | Zulfiqar Ali Sajid</title>
-<meta name="description" content="ICT for Little Minds — Grade 1: a fun, activity-based ICT textbook for Pakistan's 2026 NNCP curriculum. 12 chapters, 36 activities. Read the full book free online.">
+<meta name="description" content="ICT for Little Minds — Grade 1: an activity-based ICT textbook aligned with Pakistan's 2026 NNCP curriculum. 12 chapters, 4 units, 93 pages. Read the full book free online.">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#F0F7FF;color:#1a2b4a;font-family:"Segoe UI",Arial,Helvetica,sans-serif;line-height:1.6}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-  header.hero{padding:48px 0 36px;text-align:center;background:linear-gradient(160deg,#1565C0,#0D47A1);color:#fff;border-radius:0 0 32px 32px}
-  .hero-grid{display:flex;gap:36px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left}
-  .cover{width:min(280px,68vw);border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.35);border:6px solid #fff}
-  .hero h1{font-size:clamp(30px,5vw,50px);line-height:1.15;margin-bottom:6px}
-  .hero h1 span{color:#FFC107}
-  .tagline{font-size:clamp(15px,2.4vw,20px);color:#BBDEFB;margin:10px 0 16px;max-width:520px}
-  .stats{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
-  .stat{background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.35);border-radius:12px;padding:10px 18px;font-size:14px}
-  .stat b{color:#FFC107;font-size:20px;display:block}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-  .btn{display:inline-block;padding:15px 30px;border-radius:14px;font-size:17px;font-weight:800;text-decoration:none;cursor:pointer;border:none}
-  .btn-primary{background:#FFC107;color:#0D47A1}
-  .btn-primary:hover{background:#FFD54F;transform:translateY(-2px)}
-  .btn-ghost{background:transparent;color:#fff;border:3px solid #FFC107}
-  .btn-ghost:hover{background:#FFC107;color:#0D47A1}
-  section{padding:40px 0}
-  section h2{font-size:clamp(24px,3.6vw,34px);margin-bottom:6px;text-align:center;color:#0D47A1}
-  section h2 span{color:#1565C0}
-  .sub{text-align:center;color:#5c7a9e;margin-bottom:26px;max-width:720px;margin-left:auto;margin-right:auto}
-  .units{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-  .unit{background:#fff;border-radius:16px;padding:20px;box-shadow:0 6px 24px rgba(21,101,192,.12);border-top:6px solid #1565C0}
-  .unit:nth-child(2){border-top-color:#2E7D32}
-  .unit:nth-child(3){border-top-color:#E65100}
-  .unit:nth-child(4){border-top-color:#6A1B9A}
-  .unit h3{font-size:18px;margin-bottom:8px;color:#0D47A1}
-  .unit ul{list-style:none;font-size:14.5px;color:#3c5878}
-  .unit li{padding:5px 0;border-bottom:1px dashed #d4e2f2}
+  :root{
+    --navy:#1a2332; --navy-2:#232f45; --gold:#c9a227; --gold-soft:#e8d48b;
+    --paper:#f7f5ef; --white:#ffffff; --ink:#2b3242; --muted:#6b7280; --line:#e5e0d2;
+  }
+  body{background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  .sans{font-family:"Segoe UI",-apple-system,Arial,Helvetica,sans-serif}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:var(--navy);color:#cfd6e4;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:10px 24px}
+  .topbar .brand{color:var(--gold);font-weight:700;letter-spacing:2px}
+
+  /* ---------- hero ---------- */
+  header.hero{background:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 60%,#2c3a56 100%);color:#f2f4f8;padding:64px 0 72px;border-bottom:5px solid var(--gold)}
+  .hero-grid{display:flex;gap:56px;align-items:center;justify-content:center;flex-wrap:wrap}
+  .cover{width:min(300px,70vw);border-radius:6px;box-shadow:0 30px 70px rgba(0,0,0,.5);border:1px solid rgba(201,162,39,.5)}
+  .kicker{color:var(--gold);letter-spacing:3px;font-size:13px;text-transform:uppercase;margin-bottom:14px}
+  .hero h1{font-size:clamp(34px,5.4vw,56px);line-height:1.12;font-weight:700;color:#fff;margin-bottom:10px}
+  .hero h1 em{font-style:normal;color:var(--gold-soft)}
+  .hero .edition{font-size:15px;color:#aeb8cc;letter-spacing:1px;margin-bottom:14px}
+  .tagline{font-size:clamp(16px,2.2vw,19px);color:#d6dce8;max-width:540px;margin:0 0 22px;font-style:italic}
+  .stats{display:flex;gap:28px;flex-wrap:wrap;margin:20px 0 26px;padding:18px 0;border-top:1px solid rgba(201,162,39,.35);border-bottom:1px solid rgba(201,162,39,.35)}
+  .stat{text-align:left}
+  .stat b{font-size:30px;color:var(--gold);display:block;line-height:1.1;font-family:"Segoe UI",Arial,sans-serif}
+  .stat span{font-size:12.5px;color:#aeb8cc;letter-spacing:1.2px;text-transform:uppercase}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+  .btn{display:inline-block;padding:15px 34px;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;border-radius:4px;letter-spacing:.6px;font-family:"Segoe UI",Arial,sans-serif;transition:all .2s}
+  .btn-primary{background:var(--gold);color:var(--navy);border:1px solid var(--gold)}
+  .btn-primary:hover{background:#dbb93c;transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,162,39,.35)}
+  .btn-ghost{background:transparent;color:var(--gold-soft);border:1px solid var(--gold)}
+  .btn-ghost:hover{background:rgba(201,162,39,.12)}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0}
+  section.alt{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .eyebrow{text-align:center;color:var(--gold);letter-spacing:3px;font-size:12.5px;text-transform:uppercase;margin-bottom:10px;font-family:"Segoe UI",Arial,sans-serif;font-weight:700}
+  section h2{font-size:clamp(26px,3.6vw,36px);margin-bottom:8px;text-align:center;color:var(--navy);font-weight:700}
+  .sub{text-align:center;color:var(--muted);margin-bottom:36px;max-width:700px;margin-left:auto;margin-right:auto;font-size:16.5px}
+
+  .units{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .unit{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:6px;padding:24px 22px;box-shadow:0 4px 18px rgba(26,35,50,.06)}
+  .unit .u-no{font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-family:"Segoe UI",Arial,sans-serif;font-weight:700;margin-bottom:6px}
+  .unit h3{font-size:19px;margin-bottom:12px;color:var(--navy);font-family:"Segoe UI",Arial,sans-serif}
+  .unit ul{list-style:none;font-size:14.5px;color:var(--ink)}
+  .unit li{padding:7px 0;border-bottom:1px solid #f0ece0;font-family:"Segoe UI",Arial,sans-serif}
   .unit li:last-child{border-bottom:none}
-  .unit li b{color:#1565C0;font-weight:700;margin-right:6px}
-  .method{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
-  .step{background:#fff;border-radius:16px;padding:20px;text-align:center;box-shadow:0 6px 24px rgba(21,101,192,.12)}
-  .step .n{font-size:34px}
-  .step h3{margin:8px 0 6px;font-size:17px;color:#1565C0}
-  .step p{font-size:14px;color:#5c7a9e}
-  .samples{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
-  .samples a{flex:1 1 220px;max-width:300px;text-decoration:none}
-  .samples img{width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(21,101,192,.25);transition:transform .2s;border:4px solid #fff}
-  .samples img:hover{transform:scale(1.04)}
-  .samples p{text-align:center;font-size:13px;color:#5c7a9e;margin-top:6px}
-  .author{display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap;background:#fff;border-radius:18px;padding:28px;max-width:760px;margin:0 auto;box-shadow:0 6px 24px rgba(21,101,192,.12)}
-  .author .ini{width:84px;height:84px;border-radius:50%;background:#1565C0;color:#fff;font-size:34px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
-  .author p{color:#5c7a9e;font-size:15px;max-width:560px}
-  .author p b{color:#0D47A1}
-  .buy{text-align:center;background:linear-gradient(160deg,#1565C0,#0D47A1);border-radius:24px;padding:44px 24px;color:#fff}
+  .unit li b{color:var(--navy);font-weight:700;margin-right:8px}
+
+  .method{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;margin-top:8px}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px 16px;text-align:center}
+  .step .n{font-size:13px;letter-spacing:2px;color:var(--gold);font-weight:700;font-family:"Segoe UI",Arial,sans-serif;margin-bottom:8px}
+  .step h3{margin:0 0 8px;font-size:16.5px;color:var(--navy);font-family:"Segoe UI",Arial,sans-serif}
+  .step p{font-size:13.5px;color:var(--muted);font-family:"Segoe UI",Arial,sans-serif}
+
+  .samples{display:flex;gap:22px;flex-wrap:wrap;justify-content:center}
+  .samples a{flex:1 1 230px;max-width:300px;text-decoration:none}
+  .samples img{width:100%;border-radius:6px;box-shadow:0 12px 34px rgba(26,35,50,.18);transition:transform .25s;border:1px solid var(--line)}
+  .samples img:hover{transform:translateY(-6px)}
+  .samples p{text-align:center;font-size:13.5px;color:var(--muted);margin-top:10px;font-family:"Segoe UI",Arial,sans-serif;letter-spacing:.4px}
+
+  .author{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap;background:var(--white);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:6px;padding:34px;max-width:800px;margin:0 auto;box-shadow:0 4px 18px rgba(26,35,50,.06)}
+  .author .ini{width:88px;height:88px;border-radius:50%;background:var(--navy);color:var(--gold);font-size:32px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;font-family:"Segoe UI",Arial,sans-serif;border:2px solid var(--gold)}
+  .author p{color:var(--muted);font-size:15.5px;max-width:580px}
+  .author p b{color:var(--navy);font-size:17px}
+
+  .buy{text-align:center;background:linear-gradient(150deg,var(--navy),var(--navy-2));border-radius:8px;padding:56px 28px;color:#f2f4f8;border:1px solid rgba(201,162,39,.4)}
   .buy h2{color:#fff}
-  .buy h2 span{color:#FFC107}
-  .buy .sub{color:#BBDEFB}
-  .buy .btn{font-size:19px;padding:16px 40px;margin-top:8px}
-  footer{padding:24px 0;text-align:center;color:#8aa2bd;font-size:13px}
+  .buy .sub{color:#aeb8cc}
+  .buy .btn{font-size:18px;padding:16px 44px;margin-top:10px}
+  footer{padding:28px 0;text-align:center;color:#9aa0ad;font-size:13px;background:var(--navy);font-family:"Segoe UI",Arial,sans-serif}
+  footer .wrap{border-top:1px solid rgba(201,162,39,.25);padding-top:20px}
 </style>
 </head>
 <body>
+
+<div class="topbar sans">
+  <div class="wrap">
+    <span class="brand">ICT for Little Minds</span>
+    <span>Pakistan · NNCP 2026 Curriculum</span>
+  </div>
+</div>
 
 <header class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <img class="cover" src="assets/cover.jpg" alt="ICT for Little Minds Grade 1 book cover">
       <div>
-        <h1>ICT FOR<br><span>LITTLE MINDS</span></h1>
-        <p class="tagline"><b>Grade 1</b> — a fun, activity-based ICT textbook for Pakistan's 2026 national curriculum. Stories, games, puzzles and colouring on every page!</p>
-        <div class="stats">
-          <div class="stat"><b>12</b>chapters</div>
-          <div class="stat"><b>4</b>units</div>
-          <div class="stat"><b>81</b>pages</div>
-          <div class="stat"><b>36</b>activities</div>
+        <div class="kicker sans">A Complete Grade 1 Textbook</div>
+        <h1>ICT for <em>Little Minds</em></h1>
+        <div class="edition sans">GRADE 1 &nbsp;·&nbsp; ACTIVITY-BASED EDITION</div>
+        <p class="tagline">An activity-based ICT textbook written for Pakistan's 2026 national curriculum — where every chapter opens with a story and closes with a test.</p>
+        <div class="stats sans">
+          <div class="stat"><b>12</b><span>Chapters</span></div>
+          <div class="stat"><b>4</b><span>Units</span></div>
+          <div class="stat"><b>93</b><span>Pages</span></div>
+          <div class="stat"><b>60+</b><span>Activities</span></div>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary" href="read/">📖 Read the Book Free</a>
-          <a class="btn btn-ghost" href="#inside">See Inside</a>
+          <a class="btn btn-primary" href="read/">Read the Book Free</a>
+          <a class="btn btn-ghost" href="#inside">Look Inside</a>
         </div>
       </div>
     </div>
@@ -86,11 +116,13 @@
 
 <section id="inside">
   <div class="wrap">
-    <h2>What's <span>inside</span></h2>
-    <p class="sub">Four units take young learners from "what is technology?" to playing safe — the way the NNCP 2026 curriculum teaches it.</p>
+    <div class="eyebrow sans">Table of Contents</div>
+    <h2>Four Units, Twelve Chapters</h2>
+    <p class="sub">A complete learning journey — from "what is technology?" to playing safe — following the NNCP 2026 curriculum strands.</p>
     <div class="units">
       <div class="unit">
-        <h3>🔍 Unit 1 · Technology Around Us</h3>
+        <div class="u-no sans">Unit One</div>
+        <h3>Technology Around Us</h3>
         <ul>
           <li><b>1</b>What Is Technology?</li>
           <li><b>2</b>Technology at Home</li>
@@ -98,7 +130,8 @@
         </ul>
       </div>
       <div class="unit">
-        <h3>🎮 Unit 2 · My First Games</h3>
+        <div class="u-no sans">Unit Two</div>
+        <h3>My First Games</h3>
         <ul>
           <li><b>4</b>My First Game</li>
           <li><b>5</b>Tap, Drag, Match</li>
@@ -107,7 +140,8 @@
         </ul>
       </div>
       <div class="unit">
-        <h3>🧩 Unit 3 · Solving Problems</h3>
+        <div class="u-no sans">Unit Three</div>
+        <h3>Solving Problems</h3>
         <ul>
           <li><b>8</b>What Is a Problem?</li>
           <li><b>9</b>Finding Solutions</li>
@@ -115,7 +149,8 @@
         </ul>
       </div>
       <div class="unit">
-        <h3>🛡️ Unit 4 · Staying Safe</h3>
+        <div class="u-no sans">Unit Four</div>
+        <h3>Staying Safe</h3>
         <ul>
           <li><b>11</b>Safe or Unsafe?</li>
           <li><b>12</b>The Safe Way</li>
@@ -125,40 +160,43 @@
   </div>
 </section>
 
-<section id="method">
+<section id="method" class="alt">
   <div class="wrap">
-    <h2>Every chapter <span>teaches like a teacher</span></h2>
-    <p class="sub">The same friendly pattern in every chapter — built for the classroom and for home.</p>
+    <div class="eyebrow sans">How It Teaches</div>
+    <h2>A Proven Pattern, Every Chapter</h2>
+    <p class="sub">The same classroom-tested rhythm in all twelve chapters — designed for teachers, simple for children.</p>
     <div class="method">
-      <div class="step"><div class="n">🎯</div><h3>Learning Outcomes</h3><p>Clear goals every chapter starts with.</p></div>
-      <div class="step"><div class="n">📖</div><h3>Story Time</h3><p>Sara, Ali, Ayesha, Danish and Bolt the robot learn together.</p></div>
-      <div class="step"><div class="n">💡</div><h3>Learn</h3><p>Big ideas in short, simple points with pictures.</p></div>
-      <div class="step"><div class="n">✅</div><h3>Activities</h3><p>MCQs, tick-or-cross, match, fill-in-the-blanks and colouring.</p></div>
-      <div class="step"><div class="n">💬</div><h3>Talk &amp; Do</h3><p>Discussion questions plus try-at-home tasks.</p></div>
-      <div class="step"><div class="n">📝</div><h3>Test Yourself</h3><p>A one-page check of what each chapter taught.</p></div>
+      <div class="step"><div class="n sans">01</div><h3>Learning Outcomes</h3><p>Clear goals open every chapter.</p></div>
+      <div class="step"><div class="n sans">02</div><h3>Story Time</h3><p>Sara, Ali, Ayesha, Danish and Bolt the robot learn together.</p></div>
+      <div class="step"><div class="n sans">03</div><h3>Learn</h3><p>Big ideas in short, simple points with illustrations.</p></div>
+      <div class="step"><div class="n sans">04</div><h3>Activities</h3><p>MCQs, tick-or-cross, match, fill-in-the-blanks and colouring.</p></div>
+      <div class="step"><div class="n sans">05</div><h3>Talk &amp; Do</h3><p>Discussion questions, try-at-home tasks and a teacher guide.</p></div>
+      <div class="step"><div class="n sans">06</div><h3>Test Yourself</h3><p>A two-page assessment with short questions to close each chapter.</p></div>
     </div>
   </div>
 </section>
 
 <section id="samples">
   <div class="wrap">
-    <h2>Peek at <span>real pages</span></h2>
-    <p class="sub">Actual pages from the book — tap any page to open the free flipbook.</p>
+    <div class="eyebrow sans">Sample Pages</div>
+    <h2>See the Book</h2>
+    <p class="sub">Actual pages from the book — select any page to open the free flipbook.</p>
     <div class="samples">
       <a href="read/"><img src="assets/sample-story.jpg" alt="Sample story page"><p>A story page with Bolt</p></a>
-      <a href="read/"><img src="assets/sample-activity.jpg" alt="Sample activity page"><p>Fun activities</p></a>
-      <a href="read/"><img src="assets/sample-test.jpg" alt="Sample test page"><p>Test Yourself page</p></a>
+      <a href="read/"><img src="assets/sample-activity.jpg" alt="Sample activity page"><p>Activity pages</p></a>
+      <a href="read/"><img src="assets/sample-test.jpg" alt="Sample test page"><p>Test Yourself pages</p></a>
     </div>
   </div>
 </section>
 
-<section id="author">
+<section id="author" class="alt">
   <div class="wrap">
-    <h2>About the <span>author</span></h2>
+    <div class="eyebrow sans">The Author</div>
+    <h2>Written by an Educator</h2>
     <p class="sub">&nbsp;</p>
     <div class="author">
       <div class="ini">ZA</div>
-      <p><b>Zulfiqar Ali Sajid</b> is an author and educator who writes practical, classroom-tested books for learners of all ages — from children's primers to professional textbooks. <i>ICT for Little Minds</i> follows Pakistan's 2026 NNCP ICT curriculum, written in the simple, clear English his young students asked for.</p>
+      <p><b>Zulfiqar Ali Sajid</b><br>Author and educator writing practical, classroom-tested books for learners of all ages — from children's primers to professional textbooks. <i>ICT for Little Minds</i> follows Pakistan's 2026 NNCP ICT curriculum, in the simple, clear English his young students asked for.</p>
     </div>
   </div>
 </section>
@@ -166,9 +204,10 @@
 <section id="buy">
   <div class="wrap">
     <div class="buy">
-      <h2>Start reading <span>right now</span></h2>
-      <p class="sub">The complete 81-page book — free to read online.</p>
-      <a class="btn btn-primary" href="read/">📖 Open the Flipbook</a>
+      <div class="eyebrow sans">Free Online Edition</div>
+      <h2>Start Reading Today</h2>
+      <p class="sub">The complete 93-page book — free to read online.</p>
+      <a class="btn btn-primary" href="read/">Open the Flipbook</a>
     </div>
   </div>
 </section>
